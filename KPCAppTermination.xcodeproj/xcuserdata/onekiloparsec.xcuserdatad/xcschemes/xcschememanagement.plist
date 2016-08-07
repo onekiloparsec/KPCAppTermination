@@ -9,10 +9,20 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>KPCAppTerminationDemo.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>9F4B27A91D5752BE00C7D038</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9F4B27BA1D5752F400C7D038</key>
 		<dict>
 			<key>primary</key>
 			<true/>

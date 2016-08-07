@@ -8,12 +8,52 @@
 
 /* Begin PBXBuildFile section */
 		9F4B27AE1D5752BE00C7D038 /* KPCAppTermination.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F4B27AD1D5752BE00C7D038 /* KPCAppTermination.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9F4B27B61D5752D200C7D038 /* AppTermination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4B27B51D5752D200C7D038 /* AppTermination.swift */; };
+		9F4B27BE1D5752F400C7D038 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4B27BD1D5752F400C7D038 /* AppDelegate.swift */; };
+		9F4B27C01D5752F400C7D038 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4B27BF1D5752F400C7D038 /* ViewController.swift */; };
+		9F4B27C21D5752F400C7D038 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F4B27C11D5752F400C7D038 /* Assets.xcassets */; };
+		9F4B27C51D5752F400C7D038 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F4B27C31D5752F400C7D038 /* Main.storyboard */; };
+		9F4B27CA1D5752FA00C7D038 /* KPCAppTermination.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F4B27AA1D5752BE00C7D038 /* KPCAppTermination.framework */; };
+		9F4B27CB1D5752FA00C7D038 /* KPCAppTermination.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F4B27AA1D5752BE00C7D038 /* KPCAppTermination.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9F4B27D01D57536000C7D038 /* WeakTimerTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4B27CF1D57536000C7D038 /* WeakTimerTarget.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9F4B27CC1D5752FA00C7D038 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F4B27A11D5752BE00C7D038 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9F4B27A91D5752BE00C7D038;
+			remoteInfo = KPCAppTermination;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9F4B27CE1D5752FA00C7D038 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9F4B27CB1D5752FA00C7D038 /* KPCAppTermination.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		9F4B27AA1D5752BE00C7D038 /* KPCAppTermination.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KPCAppTermination.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F4B27AD1D5752BE00C7D038 /* KPCAppTermination.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KPCAppTermination.h; sourceTree = "<group>"; };
 		9F4B27AF1D5752BE00C7D038 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F4B27B51D5752D200C7D038 /* AppTermination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTermination.swift; sourceTree = "<group>"; };
+		9F4B27BB1D5752F400C7D038 /* KPCAppTerminationDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KPCAppTerminationDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F4B27BD1D5752F400C7D038 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9F4B27BF1D5752F400C7D038 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9F4B27C11D5752F400C7D038 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9F4B27C41D5752F400C7D038 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9F4B27C61D5752F400C7D038 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F4B27CF1D57536000C7D038 /* WeakTimerTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeakTimerTarget.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -24,6 +64,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9F4B27B81D5752F400C7D038 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F4B27CA1D5752FA00C7D038 /* KPCAppTermination.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -31,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				9F4B27AC1D5752BE00C7D038 /* KPCAppTermination */,
+				9F4B27BC1D5752F400C7D038 /* KPCAppTerminationDemo */,
 				9F4B27AB1D5752BE00C7D038 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -39,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				9F4B27AA1D5752BE00C7D038 /* KPCAppTermination.framework */,
+				9F4B27BB1D5752F400C7D038 /* KPCAppTerminationDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -46,10 +96,24 @@
 		9F4B27AC1D5752BE00C7D038 /* KPCAppTermination */ = {
 			isa = PBXGroup;
 			children = (
+				9F4B27B51D5752D200C7D038 /* AppTermination.swift */,
+				9F4B27CF1D57536000C7D038 /* WeakTimerTarget.swift */,
 				9F4B27AD1D5752BE00C7D038 /* KPCAppTermination.h */,
 				9F4B27AF1D5752BE00C7D038 /* Info.plist */,
 			);
 			path = KPCAppTermination;
+			sourceTree = "<group>";
+		};
+		9F4B27BC1D5752F400C7D038 /* KPCAppTerminationDemo */ = {
+			isa = PBXGroup;
+			children = (
+				9F4B27BD1D5752F400C7D038 /* AppDelegate.swift */,
+				9F4B27BF1D5752F400C7D038 /* ViewController.swift */,
+				9F4B27C11D5752F400C7D038 /* Assets.xcassets */,
+				9F4B27C31D5752F400C7D038 /* Main.storyboard */,
+				9F4B27C61D5752F400C7D038 /* Info.plist */,
+			);
+			path = KPCAppTerminationDemo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -84,16 +148,39 @@
 			productReference = 9F4B27AA1D5752BE00C7D038 /* KPCAppTermination.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		9F4B27BA1D5752F400C7D038 /* KPCAppTerminationDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F4B27C71D5752F400C7D038 /* Build configuration list for PBXNativeTarget "KPCAppTerminationDemo" */;
+			buildPhases = (
+				9F4B27B71D5752F400C7D038 /* Sources */,
+				9F4B27B81D5752F400C7D038 /* Frameworks */,
+				9F4B27B91D5752F400C7D038 /* Resources */,
+				9F4B27CE1D5752FA00C7D038 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9F4B27CD1D5752FA00C7D038 /* PBXTargetDependency */,
+			);
+			name = KPCAppTerminationDemo;
+			productName = KPCAppTerminationDemo;
+			productReference = 9F4B27BB1D5752F400C7D038 /* KPCAppTerminationDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		9F4B27A11D5752BE00C7D038 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = onekiloparsec;
 				TargetAttributes = {
 					9F4B27A91D5752BE00C7D038 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					9F4B27BA1D5752F400C7D038 = {
 						CreatedOnToolsVersion = 7.3.1;
 					};
 				};
@@ -104,6 +191,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 9F4B27A01D5752BE00C7D038;
 			productRefGroup = 9F4B27AB1D5752BE00C7D038 /* Products */;
@@ -111,6 +199,7 @@
 			projectRoot = "";
 			targets = (
 				9F4B27A91D5752BE00C7D038 /* KPCAppTermination */,
+				9F4B27BA1D5752F400C7D038 /* KPCAppTerminationDemo */,
 			);
 		};
 /* End PBXProject section */
@@ -123,6 +212,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9F4B27B91D5752F400C7D038 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F4B27C21D5752F400C7D038 /* Assets.xcassets in Resources */,
+				9F4B27C51D5752F400C7D038 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -130,10 +228,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F4B27B61D5752D200C7D038 /* AppTermination.swift in Sources */,
+				9F4B27D01D57536000C7D038 /* WeakTimerTarget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F4B27B71D5752F400C7D038 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F4B27C01D5752F400C7D038 /* ViewController.swift in Sources */,
+				9F4B27BE1D5752F400C7D038 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9F4B27CD1D5752FA00C7D038 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9F4B27A91D5752BE00C7D038 /* KPCAppTermination */;
+			targetProxy = 9F4B27CC1D5752FA00C7D038 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9F4B27C31D5752F400C7D038 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9F4B27C41D5752F400C7D038 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		9F4B27B01D5752BE00C7D038 /* Debug */ = {
@@ -227,6 +355,27 @@
 		9F4B27B31D5752BE00C7D038 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = KPCAppTermination/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.onekiloparsec.KPCAppTermination;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9F4B27B41D5752BE00C7D038 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -240,23 +389,31 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
-			name = Debug;
+			name = Release;
 		};
-		9F4B27B41D5752BE00C7D038 /* Release */ = {
+		9F4B27C81D5752F400C7D038 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = KPCAppTermination/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.onekiloparsec.KPCAppTermination;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				INFOPLIST_FILE = KPCAppTerminationDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.onekiloparsec.KPCAppTerminationDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		9F4B27C91D5752F400C7D038 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				INFOPLIST_FILE = KPCAppTerminationDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.onekiloparsec.KPCAppTerminationDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
@@ -277,6 +434,14 @@
 			buildConfigurations = (
 				9F4B27B31D5752BE00C7D038 /* Debug */,
 				9F4B27B41D5752BE00C7D038 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9F4B27C71D5752F400C7D038 /* Build configuration list for PBXNativeTarget "KPCAppTerminationDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F4B27C81D5752F400C7D038 /* Debug */,
+				9F4B27C91D5752F400C7D038 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
