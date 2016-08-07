@@ -16,6 +16,8 @@
 		9F4B27CA1D5752FA00C7D038 /* KPCAppTermination.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F4B27AA1D5752BE00C7D038 /* KPCAppTermination.framework */; };
 		9F4B27CB1D5752FA00C7D038 /* KPCAppTermination.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F4B27AA1D5752BE00C7D038 /* KPCAppTermination.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9F4B27D01D57536000C7D038 /* WeakTimerTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4B27CF1D57536000C7D038 /* WeakTimerTarget.swift */; };
+		9F4B27D21D5758FA00C7D038 /* QuittingWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F4B27D11D5758FA00C7D038 /* QuittingWindow.xib */; };
+		9F4B27D41D575A2700C7D038 /* WhiteProgressIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4B27D31D575A2700C7D038 /* WhiteProgressIndicator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,8 @@
 		9F4B27C41D5752F400C7D038 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9F4B27C61D5752F400C7D038 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F4B27CF1D57536000C7D038 /* WeakTimerTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeakTimerTarget.swift; sourceTree = "<group>"; };
+		9F4B27D11D5758FA00C7D038 /* QuittingWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuittingWindow.xib; sourceTree = "<group>"; };
+		9F4B27D31D575A2700C7D038 /* WhiteProgressIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhiteProgressIndicator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,7 @@
 			children = (
 				9F4B27B51D5752D200C7D038 /* AppTermination.swift */,
 				9F4B27CF1D57536000C7D038 /* WeakTimerTarget.swift */,
+				9F4B27D31D575A2700C7D038 /* WhiteProgressIndicator.swift */,
 				9F4B27AD1D5752BE00C7D038 /* KPCAppTermination.h */,
 				9F4B27AF1D5752BE00C7D038 /* Info.plist */,
 			);
@@ -111,6 +116,7 @@
 				9F4B27BF1D5752F400C7D038 /* ViewController.swift */,
 				9F4B27C11D5752F400C7D038 /* Assets.xcassets */,
 				9F4B27C31D5752F400C7D038 /* Main.storyboard */,
+				9F4B27D11D5758FA00C7D038 /* QuittingWindow.xib */,
 				9F4B27C61D5752F400C7D038 /* Info.plist */,
 			);
 			path = KPCAppTerminationDemo;
@@ -216,6 +222,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F4B27D21D5758FA00C7D038 /* QuittingWindow.xib in Resources */,
 				9F4B27C21D5752F400C7D038 /* Assets.xcassets in Resources */,
 				9F4B27C51D5752F400C7D038 /* Main.storyboard in Resources */,
 			);
@@ -229,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F4B27B61D5752D200C7D038 /* AppTermination.swift in Sources */,
+				9F4B27D41D575A2700C7D038 /* WhiteProgressIndicator.swift in Sources */,
 				9F4B27D01D57536000C7D038 /* WeakTimerTarget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
