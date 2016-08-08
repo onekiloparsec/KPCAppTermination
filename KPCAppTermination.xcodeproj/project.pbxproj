@@ -18,6 +18,7 @@
 		9F4B27D01D57536000C7D038 /* WeakTimerTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4B27CF1D57536000C7D038 /* WeakTimerTarget.swift */; };
 		9F4B27D21D5758FA00C7D038 /* QuittingWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F4B27D11D5758FA00C7D038 /* QuittingWindow.xib */; };
 		9F4B27D41D575A2700C7D038 /* WhiteProgressIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4B27D31D575A2700C7D038 /* WhiteProgressIndicator.swift */; };
+		9FD1A10C1D57DFEE004B05A1 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 9FD1A10B1D57DFEE004B05A1 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +48,7 @@
 /* Begin PBXFileReference section */
 		9F4B27AA1D5752BE00C7D038 /* KPCAppTermination.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KPCAppTermination.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F4B27AD1D5752BE00C7D038 /* KPCAppTermination.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KPCAppTermination.h; sourceTree = "<group>"; };
-		9F4B27AF1D5752BE00C7D038 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F4B27AF1D5752BE00C7D038 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = KPCAppTermination/Info.plist; sourceTree = "<group>"; };
 		9F4B27B51D5752D200C7D038 /* AppTermination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTermination.swift; sourceTree = "<group>"; };
 		9F4B27BB1D5752F400C7D038 /* KPCAppTerminationDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KPCAppTerminationDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F4B27BD1D5752F400C7D038 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +59,7 @@
 		9F4B27CF1D57536000C7D038 /* WeakTimerTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeakTimerTarget.swift; sourceTree = "<group>"; };
 		9F4B27D11D5758FA00C7D038 /* QuittingWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuittingWindow.xib; sourceTree = "<group>"; };
 		9F4B27D31D575A2700C7D038 /* WhiteProgressIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhiteProgressIndicator.swift; sourceTree = "<group>"; };
+		9FD1A10B1D57DFEE004B05A1 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				9F4B27AC1D5752BE00C7D038 /* KPCAppTermination */,
+				9FD1A10A1D57DFDE004B05A1 /* Supporting files */,
 				9F4B27BC1D5752F400C7D038 /* KPCAppTerminationDemo */,
 				9F4B27AB1D5752BE00C7D038 /* Products */,
 			);
@@ -104,7 +107,6 @@
 				9F4B27CF1D57536000C7D038 /* WeakTimerTarget.swift */,
 				9F4B27D31D575A2700C7D038 /* WhiteProgressIndicator.swift */,
 				9F4B27AD1D5752BE00C7D038 /* KPCAppTermination.h */,
-				9F4B27AF1D5752BE00C7D038 /* Info.plist */,
 			);
 			path = KPCAppTermination;
 			sourceTree = "<group>";
@@ -120,6 +122,15 @@
 				9F4B27C61D5752F400C7D038 /* Info.plist */,
 			);
 			path = KPCAppTerminationDemo;
+			sourceTree = "<group>";
+		};
+		9FD1A10A1D57DFDE004B05A1 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				9FD1A10B1D57DFEE004B05A1 /* README.md */,
+				9F4B27AF1D5752BE00C7D038 /* Info.plist */,
+			);
+			name = "Supporting files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +248,7 @@
 			files = (
 				9F4B27B61D5752D200C7D038 /* AppTermination.swift in Sources */,
 				9F4B27D41D575A2700C7D038 /* WhiteProgressIndicator.swift in Sources */,
+				9FD1A10C1D57DFEE004B05A1 /* README.md in Sources */,
 				9F4B27D01D57536000C7D038 /* WeakTimerTarget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -444,6 +456,7 @@
 				9F4B27B41D5752BE00C7D038 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9F4B27C71D5752F400C7D038 /* Build configuration list for PBXNativeTarget "KPCAppTerminationDemo" */ = {
 			isa = XCConfigurationList;
@@ -452,6 +465,7 @@
 				9F4B27C91D5752F400C7D038 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
