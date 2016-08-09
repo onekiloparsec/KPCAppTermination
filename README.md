@@ -28,3 +28,15 @@ KPCAppTermination provides a graceful way to quit your app. It:
 * quit gracefully
 
 KPCAppTermination is very much in beta for now, but the basics work.
+
+Author
+------
+
+[Cédric Foellmi](https://github.com/onekiloparsec) ([@onekiloparsec](https://twitter.com/onekiloparsec))
+
+
+LICENSE & NOTES
+---------------
+
+KPCAppTermination is licensed under the MIT license and hosted on GitHub at https://github.com/onekiloparsec/KPCAppTermination/
+Fork the project and feel free to send pull requests with your changes!
