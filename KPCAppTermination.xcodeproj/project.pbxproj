@@ -18,7 +18,6 @@
 		9F4B27D01D57536000C7D038 /* WeakTimerTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4B27CF1D57536000C7D038 /* WeakTimerTarget.swift */; };
 		9F4B27D21D5758FA00C7D038 /* QuittingWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F4B27D11D5758FA00C7D038 /* QuittingWindow.xib */; };
 		9F4B27D41D575A2700C7D038 /* WhiteProgressIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4B27D31D575A2700C7D038 /* WhiteProgressIndicator.swift */; };
-		9FD1A10C1D57DFEE004B05A1 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 9FD1A10B1D57DFEE004B05A1 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -248,7 +247,6 @@
 			files = (
 				9F4B27B61D5752D200C7D038 /* AppTermination.swift in Sources */,
 				9F4B27D41D575A2700C7D038 /* WhiteProgressIndicator.swift in Sources */,
-				9FD1A10C1D57DFEE004B05A1 /* README.md in Sources */,
 				9F4B27D01D57536000C7D038 /* WeakTimerTarget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

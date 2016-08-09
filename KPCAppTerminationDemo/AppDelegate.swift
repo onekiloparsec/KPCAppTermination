@@ -30,15 +30,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         // Assign the quittingWindow
         self.appTermination.quittingWindow = self.quittingWindow
-        self.appTermination.minimumTimerInterval = 10.0
-        self.appTermination.finalTimerInterval = 10.0
+        self.appTermination.minimumTimerInterval = 5.0
+        self.appTermination.finalTimerInterval = 1.0
         
         self.appTermination.finalTerminationBlock = { (quittingWindow) in
             // No need to wrap around mainQueue, as the final block is launched from it already.
             if let panel = quittingWindow as? QuittingPanel {
                 panel.title = "Ready To Quit"
                 panel.messageLabel?.stringValue = "Done"
-                panel.progressIndicator?.startAnimation(self)
+                panel.progressIndicator?.stopAnimation(self)
             }
         }
     }

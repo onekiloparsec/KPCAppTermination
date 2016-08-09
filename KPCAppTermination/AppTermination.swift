@@ -34,7 +34,7 @@ public class AppTermination : NSObject {
             let terminationBlock: dispatch_block_t = {
                 block(quittingWindow: self.quittingWindow)
                 
-                if self.terminationBlocks.count == 0 {
+                if self.terminationBlocks.count == 0 && self.terminationTimer == nil {
                     if let finalBlock = self.finalTerminationBlock {
                         dispatch_async(dispatch_get_main_queue(), {
                             finalBlock(quittingWindow: self.quittingWindow)
@@ -44,7 +44,7 @@ public class AppTermination : NSObject {
                 }
             }
             
-            dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0), {
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
                 terminationBlock()
             })
         }
