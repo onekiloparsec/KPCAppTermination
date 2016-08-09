@@ -1,0 +1,4 @@
+language: swift
+xcode_project: KPCAppTermination.xcodeproj
+xcode_scheme: KPCAppTermination
+osx_image: xcode7.3
