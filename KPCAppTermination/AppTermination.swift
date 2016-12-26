@@ -44,7 +44,7 @@ open class AppTermination : NSObject {
                 }
             }
             
-            DispatchQueue.global(priority: DispatchQueue.GlobalQueuePriority.default).async(execute: {
+            DispatchQueue.global().async(execute: {
                 terminationBlock()
             })
         }
