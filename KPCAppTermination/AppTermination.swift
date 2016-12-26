@@ -8,43 +8,43 @@
 
 import Foundation
 
-public class AppTermination : NSObject {
+open class AppTermination : NSObject {
     
-    @IBOutlet public var quittingWindow: NSWindow?
+    @IBOutlet open var quittingWindow: NSWindow?
     
-    public var minimumTimerInterval: NSTimeInterval = 0.5
-    public var finalTimerInterval: NSTimeInterval = 0.5
-    public var finalTerminationBlock: ((quittingWindow: NSWindow?) -> Void)?
+    open var minimumTimerInterval: TimeInterval = 0.5
+    open var finalTimerInterval: TimeInterval = 0.5
+    open var finalTerminationBlock: ((_ quittingWindow: NSWindow?) -> Void)?
 
-    private var terminationTimer: NSTimer? = nil
-    private var terminationBlocks: [((quittingWindow: NSWindow?) -> Void)] = []
+    fileprivate var terminationTimer: Timer? = nil
+    fileprivate var terminationBlocks: [((_ quittingWindow: NSWindow?) -> Void)] = []
     
-    public func registerAsyncTerminationBlock(block: ((quittingWindow: NSWindow?) -> Void)) {
+    open func registerAsyncTerminationBlock(_ block: @escaping ((_ quittingWindow: NSWindow?) -> Void)) {
         self.terminationBlocks.append(block)
     }
     
-    public func applicationShouldTerminate(sender: NSApplication) -> NSApplicationTerminateReply {
+    open func applicationShouldTerminate(_ sender: NSApplication) -> NSApplicationTerminateReply {
         
         NSApp.windows.forEach { $0.close() }
         self.quittingWindow?.makeKeyAndOrderFront(self)
         
         while self.terminationBlocks.count > 0 {
-            let block = self.terminationBlocks.removeAtIndex(0)
+            let block = self.terminationBlocks.remove(at: 0)
             
-            let terminationBlock: dispatch_block_t = {
-                block(quittingWindow: self.quittingWindow)
+            let terminationBlock: ()->() = {
+                block(self.quittingWindow)
                 
                 if self.terminationBlocks.count == 0 && self.terminationTimer == nil {
                     if let finalBlock = self.finalTerminationBlock {
-                        dispatch_async(dispatch_get_main_queue(), {
-                            finalBlock(quittingWindow: self.quittingWindow)
+                        DispatchQueue.main.async(execute: {
+                            finalBlock(self.quittingWindow)
                         })
                     }
                     self.startFinalTerminationTimer()
                 }
             }
             
-            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
+            DispatchQueue.global(priority: DispatchQueue.GlobalQueuePriority.default).async(execute: {
                 terminationBlock()
             })
         }
@@ -55,24 +55,24 @@ public class AppTermination : NSObject {
         
         // This timer is only here to make sure we show the quitting window at least for a little while, even
         // if there are no termination blocks, or those are very quick to complete.
-        self.terminationTimer = NSTimer(timeInterval: self.minimumTimerInterval,
+        self.terminationTimer = Timer(timeInterval: self.minimumTimerInterval,
                                         target: weakTarget,
                                         selector: #selector(WeakTimerTarget.timerDidFire(_:)),
                                         userInfo: nil,
                                         repeats: weakTarget.timerRepeat)
         
-        NSRunLoop.mainRunLoop().addTimer(self.terminationTimer!, forMode: NSModalPanelRunLoopMode)
+        RunLoop.main.add(self.terminationTimer!, forMode: RunLoopMode.modalPanelRunLoopMode)
         
-        return .TerminateLater
+        return .terminateLater
     }
     
-    @objc private func finallyLaunchAppTermination(timer: NSTimer) {
+    @objc fileprivate func finallyLaunchAppTermination(_ timer: Timer) {
         self.terminationTimer = nil;
         
         if (self.terminationBlocks.count == 0) {
             if let finalBlock = self.finalTerminationBlock {
-                dispatch_async(dispatch_get_main_queue(), {
-                    finalBlock(quittingWindow: self.quittingWindow)
+                DispatchQueue.main.async(execute: {
+                    finalBlock(self.quittingWindow)
                 })
             }
             self.startFinalTerminationTimer()
@@ -80,17 +80,17 @@ public class AppTermination : NSObject {
         // else: Reprieve timer is over but termination blocks are not. Keep going...
     }
     
-    private func startFinalTerminationTimer() {
-        let deathTimer = NSTimer(timeInterval: self.finalTimerInterval,
+    fileprivate func startFinalTerminationTimer() {
+        let deathTimer = Timer(timeInterval: self.finalTimerInterval,
                                  target: self,
                                  selector: #selector(AppTermination.terminateAppNow(_:)),
                                  userInfo: nil,
                                  repeats:false)
         
-        NSRunLoop.mainRunLoop().addTimer(deathTimer, forMode: NSModalPanelRunLoopMode)
+        RunLoop.main.add(deathTimer, forMode: RunLoopMode.modalPanelRunLoopMode)
     }
     
-    @objc private func terminateAppNow(timer: NSTimer) {
-        NSApplication.sharedApplication().replyToApplicationShouldTerminate(true)
+    @objc fileprivate func terminateAppNow(_ timer: Timer) {
+        NSApplication.shared().reply(toApplicationShouldTerminate: true)
     }
 }

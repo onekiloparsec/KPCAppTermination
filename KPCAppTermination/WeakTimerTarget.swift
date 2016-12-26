@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class WeakTimerTarget {
+open class WeakTimerTarget {
     weak var target: NSObject?
     var targetSelector: Selector
     var timerRepeat: Bool = false
@@ -19,9 +19,9 @@ public class WeakTimerTarget {
         self.timerRepeat = timerRepeat
     }
     
-    @objc func timerDidFire(timer: NSTimer) {
+    @objc func timerDidFire(_ timer: Timer) {
         if let target = self.target {
-            target.performSelector(self.targetSelector, withObject: timer)
+            target.perform(self.targetSelector, with: timer)
         }
         if self.timerRepeat == false {
             timer.invalidate()

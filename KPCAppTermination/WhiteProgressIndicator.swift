@@ -9,7 +9,7 @@
 import Cocoa
 import QuartzCore
 
-public class WhiteProgressIndicator: NSProgressIndicator {
+open class WhiteProgressIndicator: NSProgressIndicator {
     required public init?(coder: NSCoder) {
         super.init(coder: coder)
         self.makeItWhite()
@@ -20,7 +20,7 @@ public class WhiteProgressIndicator: NSProgressIndicator {
         self.makeItWhite()
     }
     
-    public func makeItWhite() {
+    open func makeItWhite() {
         let lighten = CIFilter(name: "CIColorControls")!
         lighten.setDefaults()
         lighten.setValue(1, forKey: "inputBrightness")
