@@ -23,7 +23,7 @@ open class AppTermination : NSObject {
         self.terminationBlocks.append(block)
     }
     
-    open func applicationShouldTerminate(_ sender: NSApplication) -> NSApplicationTerminateReply {
+    open func applicationShouldTerminate(_ sender: NSApplication) -> NSApplication.TerminateReply {
         
         NSApp.windows.forEach { $0.close() }
         self.quittingWindow?.makeKeyAndOrderFront(self)
@@ -61,7 +61,7 @@ open class AppTermination : NSObject {
                                         userInfo: nil,
                                         repeats: weakTarget.timerRepeat)
         
-        RunLoop.main.add(self.terminationTimer!, forMode: RunLoopMode.modalPanelRunLoopMode)
+        RunLoop.main.add(self.terminationTimer!, forMode: RunLoop.Mode.modalPanel)
         
         return .terminateLater
     }
@@ -87,10 +87,10 @@ open class AppTermination : NSObject {
                                  userInfo: nil,
                                  repeats:false)
         
-        RunLoop.main.add(deathTimer, forMode: RunLoopMode.modalPanelRunLoopMode)
+        RunLoop.main.add(deathTimer, forMode: RunLoop.Mode.modalPanel)
     }
     
     @objc fileprivate func terminateAppNow(_ timer: Timer) {
-        NSApplication.shared().reply(toApplicationShouldTerminate: true)
+        NSApplication.shared.reply(toApplicationShouldTerminate: true)
     }
 }

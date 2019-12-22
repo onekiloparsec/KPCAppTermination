@@ -16,7 +16,7 @@ class QuittingPanel : NSPanel {
     
     static func loadFromXib() -> QuittingPanel? {
         var topLevels: NSArray?
-        Bundle.main.loadNibNamed("QuittingWindow", owner: self, topLevelObjects: &topLevels!)
+        Bundle.main.loadNibNamed("QuittingWindow", owner: self, topLevelObjects: &topLevels)
         return topLevels?.filter({ $0 is QuittingPanel }).first as? QuittingPanel
     }
 }
@@ -43,7 +43,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
 
-    func applicationShouldTerminate(_ sender: NSApplication) -> NSApplicationTerminateReply {
+    func applicationShouldTerminate(_ sender: NSApplication) -> NSApplication.TerminateReply {
         print(#function)
         
         self.appTermination.registerAsyncTerminationBlock { (quittingWindow) in
